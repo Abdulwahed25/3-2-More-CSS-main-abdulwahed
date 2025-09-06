@@ -1,0 +1,45 @@
+/* Base */
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  color: #1f2937;            /* gray-800 */
+  background: #f8fafc;       /* slate-50 */
+}
+main { max-width: 800px; margin: 0 auto; padding: 1rem; }
+
+/* Elements */
+h1 { font-size: 2rem; color: #111827; }      /* gray-900 */
+h2 { font-size: 1.5rem; color: #111827; }
+p  { margin: 0 0 1rem; }
+
+/* ID */
+#site-title { font-size: 2.25rem; font-weight: 800; }
+
+/* Classes */
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;                 /* gray-200 */
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.btn {
+  background: #2563eb;                       /* blue-600 */
+  color: #fff;
+  border: 0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Descendant + hover */
+.nav a {
+  text-decoration: none;
+  color: #374151;                             /* gray-700 */
+  padding: 0.25rem 0.5rem;
+}
+.nav a:hover { background: #e5e7eb; border-radius: 4px; }
+
+/* Grouping */
+h2, h3 { color: #111827; }

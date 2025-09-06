@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Basics — Very Easy</title>
+  <!-- Stylesheet link (Task 1: make sure this is present) -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1 id="site-title">My Study Page</h1>
+    <nav class="nav" aria-label="Primary">
+      <a href="#notes">Notes</a>
+      <a href="#resources">Resources</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Welcome!</h2>
+      <p>This assignment is about linking CSS and using the simplest selectors.</p>
+    </section>
+
+    <section id="notes" class="notes">
+      <h2>Notes</h2>
+
+      <article class="card">
+        <h3>Selectors</h3>
+        <p>Use element, id, and class selectors to style this page.</p>
+      </article>
+
+      <article class="card">
+        <h3>Box Model</h3>
+        <p>Add margin, padding, and a border radius to make these cards easy to read.</p>
+      </article>
+    </section>
+
+    <section id="resources" class="resources">
+      <h2>Resources</h2>
+      <p>Try searching for “CSS selectors” on MDN for quick references.</p>
+      <a class="btn" href="https://developer.mozilla.org/" target="_blank" rel="noopener">Visit MDN</a>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>There’s no real form here—just focus on the CSS basics above.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 CSS Basics</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,54 @@
+/* === Task 2: Global base === */
+body {
+  /* TODO: set a clean, readable font (e.g., system-ui) */
+  /* TODO: set a comfortable line-height (e.g., 1.6) */
+  /* TODO: remove default page margins */
+}
+
+/* Center the main content area (Task 8 - optional but recommended) */
+main {
+  /* TODO: set max-width (e.g., 800px) */
+  /* TODO: center with margin: 0 auto; */
+  /* TODO: add side padding (e.g., 1rem) */
+}
+
+/* === Task 3: Element selectors === */
+h1 { /* TODO: pick a color and size */ }
+h2 { /* TODO: pick a color and size */ }
+p  { /* TODO: give paragraphs some bottom margin */ }
+
+/* === Task 4: ID selector (#site-title) === */
+#site-title {
+  /* TODO: make bigger/bolder than other headings */
+}
+
+/* === Task 5: Class selectors (.card and .btn) === */
+.card {
+  /* TODO: light background color */
+  /* TODO: padding (e.g., 1rem) */
+  /* TODO: border-radius (e.g., 8px) */
+  /* TODO: margin between cards (e.g., 1rem 0) */
+}
+
+.btn {
+  /* TODO: background color */
+  /* TODO: white text; remove border */
+  /* TODO: padding and border-radius */
+  /* TODO: cursor: pointer; */
+}
+
+/* === Task 6: Descendant selector (.nav a) + hover === */
+.nav a {
+  /* TODO: remove underline (text-decoration) */
+  /* TODO: spacing (padding) */
+  /* TODO: soft text color */
+}
+
+.nav a:hover {
+  /* TODO: change color or background slightly on hover */
+}
+
+/* === Task 7: Grouping selector (h2, h3) === */
+h2, h3 {
+  /* TODO: give both a shared style (e.g., same color) */
+}
