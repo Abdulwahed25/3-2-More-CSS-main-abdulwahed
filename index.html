@@ -1,56 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CSS Basics — Very Easy</title>
-  <!-- Stylesheet link (Task 1: make sure this is present) -->
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Basics Lab – Layout & Typography</title>
+  <!-- TODO 0: Link the styles CSS first. -->
+
 </head>
 <body>
   <header class="site-header">
-    <h1 id="site-title">My Study Page</h1>
-    <nav class="nav" aria-label="Primary">
-      <a href="#notes">Notes</a>
-      <a href="#resources">Resources</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>CSS Basics Lab</h1>
+    <p class="tagline">Practice common properties, text & fonts, box model, flexbox, and positioning.</p>
   </header>
 
-  <main>
-    <section class="intro">
-      <h2>Welcome!</h2>
-      <p>This assignment is about linking CSS and using the simplest selectors.</p>
+  <main class="container">
+    <!-- SECTION 1: Common Properties -->
+    <section id="common-properties" class="card">
+      <h2>1) Common Properties</h2>
+      <p class="lead">Set color, backgrounds, display, and reuse values via CSS variables.</p>
+
+      <div class="color-demo">
+        <p class="color-note">Primary text should use the brand color.</p>
+        <p class="muted">Muted text uses a softer tone.</p>
+        <div class="bg-sample">Background sample block</div>
+        <span class="inline-label">This label is inline</span>
+        <div class="inline-label alt">Another label that should appear inline</div>
+      </div>
     </section>
 
-    <section id="notes" class="notes">
-      <h2>Notes</h2>
-
-      <article class="card">
-        <h3>Selectors</h3>
-        <p>Use element, id, and class selectors to style this page.</p>
+    <!-- SECTION 2: Fonts & Text -->
+    <section id="fonts-text" class="card">
+      <h2>2) Fonts & Text</h2>
+      <article class="copy">
+        <h3 class="title">Typography Playground</h3>
+        <p class="intro">
+          Adjust font families, sizing (px/em/rem), line-height, and text transforms here.
+        </p>
+        <p class="sample-text">
+          The quick brown fox jumps over the lazy dog — try different sizes and weights.
+        </p>
+        <a href="#" class="cta-link">Read more</a>
       </article>
-
-      <article class="card">
-        <h3>Box Model</h3>
-        <p>Add margin, padding, and a border radius to make these cards easy to read.</p>
-      </article>
     </section>
 
-    <section id="resources" class="resources">
-      <h2>Resources</h2>
-      <p>Try searching for “CSS selectors” on MDN for quick references.</p>
-      <a class="btn" href="https://developer.mozilla.org/" target="_blank" rel="noopener">Visit MDN</a>
+    <!-- SECTION 3: Box Model -->
+    <section id="box-model" class="card">
+      <h2>3) Box Model</h2>
+      <div class="box-row">
+        <div class="box b1">Box 1</div>
+        <div class="box b2">Box 2</div>
+        <div class="box b3">Box 3</div>
+      </div>
+      <p class="hint">Experiment with margin, padding, border, width/height, and <code>box-sizing</code>.</p>
     </section>
 
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <p>There’s no real form here—just focus on the CSS basics above.</p>
+    <!-- SECTION 4: Flexbox -->
+    <section id="flexbox" class="card">
+      <h2>4) Flexbox</h2>
+      <div class="toolbar">
+        <button class="btn">Home</button>
+        <button class="btn">Docs</button>
+        <button class="btn">About</button>
+        <button class="btn">Contact</button>
+      </div>
+
+      <div class="product-grid">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Positioning -->
+    <section id="positioning" class="card">
+      <h2>5) Positioning</h2>
+      <div class="position-stage">
+        <div class="static-box">static</div>
+        <div class="relative-box">relative</div>
+        <div class="absolute-parent">
+          parent (relative)
+          <div class="absolute-child">absolute</div>
+        </div>
+        <div class="fixed-badge">fixed</div>
+        <div class="stack a">A</div>
+        <div class="stack b">B</div>
+      </div>
+      <p class="hint">Use <code>position</code> and <code>z-index</code> to control stacking and placement.</p>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© 2025 CSS Basics</p>
+    <small>&copy; 2025 CSS Basics Lab</small>
   </footer>
 </body>
 </html>

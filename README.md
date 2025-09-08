@@ -1,137 +1,119 @@
-# CSS Fundamentals
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](#)
+# SocialBook - CSS Layout & Typography (Easy)
 
-## What is CSS?
-CSS (Cascading Style Sheets) styles your HTML—controlling colors, fonts, spacing, sizes, and layout.
+## Overview
 
-## Why CSS?
-- Makes pages clear and attractive  
-- Separates content (HTML) from design (CSS)  
-- Adapts layouts to phones, tablets, and desktops
+In this assignment you’ll **reuse the same HTML** and practice new CSS concepts: **Common Properties (colors, backgrounds, display, floats/clear, CSS variables), Font & Text, Box Model, Flexbox, and Positioning (relative/absolute/fixed with z-index)**. Your goal is to style the SocialBook UI with clean layout and readable typography — keeping the tasks simple and focused.
 
-## How to Add CSS
-1. **External (recommended):**
-   ```html
-   <link rel="stylesheet" href="styles.css">
-   ```
-2. **Internal (in `<head>`):**
-   ```html
-   <style> h1 { color: teal; } </style>
-   ```
-3. **Inline (avoid for most cases):**
-   ```html
-   <h1 style="color: teal;">Title</h1>
-   ```
+## What You'll Learn
 
-## CSS Fundamentals (Cheat Sheet)
-**Selectors** — tell the browser what to style:
-```css
-/* Element */     p { line-height: 1.6; }
-/* Class */       .card { background: #fff; padding: 1rem; border-radius: 8px; }
-/* ID (unique) */ #site-title { font-weight: 800; }
-/* Descendant */  .nav a { text-decoration: none; }
+* **CSS Variables** for theme colors
+* **Typography basics** (font, size units, text-transform)
+* **Box Model** (padding, border, margin, box-sizing)
+* **Flexbox** for navigation and tag rows
+* **Common Properties** (backgrounds, display, float & clear)
+* **Positioning** (fixed nav, absolute badges, z-index)
+* **Responsive units** with `clamp()`
+
+## Prerequisites
+
+* Basic understanding of HTML structure
+* Any modern web browser
+* A text editor (VS Code, Sublime, Notepad++)
+
+## Files
+
+* `index.html`: Same structure as before (link your CSS in the head)
+* `styles.css`: Starter CSS with TODOs for the new concepts
+* `README.md`: This instruction file
+
+## Instructions
+
+### Step 1: Set Up the Project
+
+1. Open `index.html` in your editor.
+2. **TODO 0**: Link the external CSS file in the `<head>` (see comment).
+
+### Step 2: Complete the CSS TODOs
+
+Open `styles.css` and complete each TODO section to style your app:
+
+#### TODO 1: CSS Variables
+Define theme colors on `:root` and use them with `var(--color-name)`.
+
+#### TODO 2: Base Typography
+Set base font, line-height, and page background on `body`.
+
+#### TODO 3: Box Model & Sizing
+Enable `box-sizing: border-box` globally; center `#app` with a card look.
+
+#### TODO 4: Display & Flexbox
+Turn `.navigation` into a flex row and make `.trending-tags` wrap with gaps.
+
+#### TODO 5: Font & Text
+Make `.username` bolder/larger; adjust heading sizes with `rem`; try a text transform.
+
+#### TODO 6: Backgrounds & Borders
+Give `.post` and `.profile-card` nice surfaces, borders, padding, and spacing.
+
+#### TODO 7: Float & Clear
+Float `.timestamp` to the right inside `.post` and clear as needed.
+
+#### TODO 8: Positioning + z-index
+Fix the top nav with `position: fixed` and `z-index`; add a **Pinned** ribbon to `.post.highlight` using `::before` with `position: absolute`; absolutely position `.follower-count` in `.profile-card`.
+
+#### TODO 9: Buttons & Links (states)
+Style `button` and `.chat-link:hover` for simple interactivity.
+
+#### TODO 10: Responsive Units
+Use `clamp()` so paragraph text scales a little on wide screens.
+
+### Step 3: Test Your App
+
+1. Save both files
+2. Open `index.html` in your browser
+3. Verify:
+   - Top navigation stays visible while scrolling (fixed + z-index)
+   - Posts and profile cards have clean spacing and borders
+   - Timestamps float to the right in posts
+   - Trending tags wrap nicely on small screens (flex-wrap)
+   - Usernames are bold and transformed
+   - Buttons/links have hover states
+   - Paragraphs scale subtly with `clamp()`
+
+## Understanding the Concepts (Cheat Sheet)
+
+* **Common Properties & Variables**: Colors (hex, rgb, hsl), backgrounds, `display`, `float/clear`, and reusable `--variables`.
+* **Font & Text**: `font-family`, `font-size` (use `rem`), `font-weight`, `text-transform`, `letter-spacing`.
+* **Box Model**: `padding`, `border`, `margin`, `border-radius`, and universal `box-sizing`.
+* **Flexbox**: `display: flex`, `justify-content`, `gap`, `flex-wrap`.
+* **Positioning**: `position: fixed/relative/absolute`, anchoring, and `z-index` for stacking.
+
+## Troubleshooting
+
+* **Nav overlaps content?** Increase `body { padding-top: ... }` to match nav height.
+* **Float looks odd?** Ensure the container uses a clearfix or add `::after` clear.
+* **Badge misplaced?** Make the parent `position: relative` first.
+* **Fonts too big/small?** Tweak the base font size or the `clamp()` range.
+
+## Project Structure
+
+```
+css-layout-typography/
+├── index.html
+├── styles.css
+└── README.md
 ```
 
-**Properties & values** — `color`, `background`, `font-size`, `margin`, `padding`, `border`, `width`, `height`.
+## Next Steps
 
-**Box model** — content → padding → border → margin.
-```
-+-----------------------------+
-|         margin              |
-|  +-----------------------+  |
-|  |        border         |  |
-|  |  +-----------------+  |  |
-|  |  |     padding     |  |  |
-|  |  |  +-----------+  |  |  |
-|  |  |  |  content  |  |  |  |
-|  |  |  +-----------+  |  |  |
-|  |  +-----------------+  |  |
-|  +-----------------------+  |
-+-----------------------------+
-```
+* Try `position: sticky` on headers.
+* Explore `flex` shorthand on items.
+* Experiment with `background-image: linear-gradient(...)` for surfaces.
 
-**Cascade & specificity** — later/more specific wins: `#id` > `.class` > `element` (many styles like `color` inherit).
+## CSS Resources
 
-**States (pseudo-classes)** — simple interactivity:
-```css
-.nav a:hover { background: #e5e7eb; }
-```
-
-## TODO Tasks Overview
-Style a small page using **an external stylesheet**. You’ll practice:
-- linking CSS in HTML  
-- **element** selectors (`h1`, `p`, `a`)  
-- **class** selectors (`.card`, `.btn`)  
-- **id** selector (`#site-title`)  
-- **descendant** selector (`.nav a`)  
-- **grouping** selectors (`h2, h3`)  
-- simple **box model** (margin, padding, border)  
-- basic **hover** effect (`:hover`)
-
-> Work mostly in `styles.css`. No JavaScript, no frameworks.
-
-## Repo structure
-```
-/ (repo root)
-├─ README.md
-├─ index.html       # starter markup
-├─ styles.css       # students edit this (TODOs inside)
-└─ .gitignore
-```
-
-## Getting started
-1. Open `index.html` in your editor and browser.
-2. Complete the TODOs in `styles.css` (keep changes small and simple).
-3. Refresh the browser after each step to see changes.
-
----
-
-## Tasks (step-by-step)
-
-### 1) Link the stylesheet
-- Confirm `<link rel="stylesheet" href="styles.css">` is present in `<head>`.
-- ✅ *Verify:* Changing `body { background: ... }` updates the page.
-
-### 2) Global base
-- In `styles.css`, set a readable font for the whole page and a comfy line-height.
-- Remove default page margins (set `body { margin: 0; }`).
-- ✅ *Verify:* Text looks cleaner and touches no screen edge.
-
-### 3) Element selectors
-- Style `h1`, `h2`, `p` (font-size, color). Keep it simple.
-- ✅ *Verify:* All headings share a consistent look; paragraphs have spacing below.
-
-### 4) ID selector
-- Make `#site-title` (the big page title) larger/bolder than other headings.
-- ✅ *Verify:* Only the top title is affected.
-
-### 5) Class selectors (cards + buttons)
-- Style `.card` with a light background, padding, rounded corners, and margin.
-- Style `.btn` with background color, white text, padding, and rounded corners.
-- ✅ *Verify:* Articles look like simple cards; the button looks clickable.
-
-### 6) Descendant selector (nav links)
-- Target `.nav a` to remove underline and add spacing.
-- Add `:hover` for `.nav a` to change color or background slightly.
-- ✅ *Verify:* Only links inside the nav change; hover feedback is visible.
-
-### 7) Grouping selector
-- Give `h2, h3` a shared color or font-size tweak.
-- ✅ *Verify:* Both `h2` and `h3` change together.
-
-### 8) Box model touch-up (recommended)
-- Add `max-width` and centered layout to the main content (e.g., `main { max-width: 800px; margin: 0 auto; padding: 1rem; }`).
-- ✅ *Verify:* Content is centered with comfortable side padding.
-
----
-
-## Submission checklist
-- [ ] External stylesheet is linked (no inline styles for required tasks).
-- [ ] Element selectors used for `h1/h2/p`.
-- [ ] `#site-title` styled differently with an **id** selector.
-- [ ] `.card` and `.btn` styled using **class** selectors.
-- [ ] `.nav a` styled using a **descendant** selector, with a working `:hover`.
-- [ ] `h2, h3` grouped in one rule.
-- [ ] Basic spacing added with margin/padding.
-- [ ] Code is tidy and commented where you made changes.
-
-# Congratulations! You've mastered the CSS fundamentals! 🎉
+* **MDN CSS Variables**: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+* **MDN Box Model**: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model
+* **MDN Flexbox**: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
+* **MDN Positioning**: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning

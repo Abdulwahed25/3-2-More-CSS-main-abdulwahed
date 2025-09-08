@@ -1,54 +1,117 @@
-/* === Task 2: Global base === */
+/* More CSS.
+   Tip: Use the README for guidance.
+*/
+
+
+/* TODO 1:
+  - Define CSS variables on :root for brand colors.
+  - Apply a global box-sizing reset using the universal selector (hint use * selector).
+*/
+
+/* TODO 2:
+   -Give .site-header & .site-footer a subtle background using var(--card)
+   -Make the .tagline class a bit muted (use var(--muted))
+   -Add a soft box-shadow to .card class
+*/
+
+/* TODO 3:
+   - Set the color to the brand variable and make the text bold for the .color-demo .color-note class.
+   - Set the color to var(--muted) and the font size to 0.95rem for the .color-demo .muted class.
+   - Create a 100% width block with a minimum height of 80px, a background color of your choice, and an optional background gradient for the .bg-sample class.
+*/
+
+/* TODO 4:
+   - For the .inline-label class: make it behave like an inline-block element with small padding and a border.
+   - For the .inline-label.alt class: ensure it stays inline with others but use a different border style.
+*/
+
+/* TODO 5:
+   - For the .copy .title class: choose a font-size (use rem), a font-weight between 600–700, 
+     and apply text-transform: capitalize.
+   - For the .copy .intro class: set the font-style to italic and slightly increase the line-height.
+   - For the .copy .sample-text class: define a font-family stack (include a serif fallback) 
+     and use relative sizing with em (e.g., 1.1em).
+   - For the .cta-link class: remove the underline, set the color to the brand variable, 
+     and add a hover style (underline + darker color using rgb/hex/hsl).
+*/
+
+/* TODO 6:
+   - For the .box class: set a fixed width (e.g., 120px) and height (e.g., 80px), 
+     add padding and a visible border.
+   - For the .box class: round the corners slightly and center the text inside 
+     (hint: use flexbox).
+   - For the .b1 class: apply a unique background or border style.
+   - For the .b2 class: apply a unique background or border style.
+   - For the .b3 class: apply a unique background or border style.
+*/
+
+/* TODO 7:
+   - For the .toolbar class: make it a flex container, distribute items with space-between, 
+     align them vertically in the center, and add a gap.
+   - For the .btn class: add padding, remove the default border, and provide hover feedback.
+   - For the .product-grid class: create a responsive flex grid by setting display:flex, 
+     wrapping items, adding a gap, and ensuring items are at least 140px wide 
+     using flex-basis or min().
+   - For the .product-grid .item class: center the content, set a minimum height, 
+     and apply a soft background.
+*/
+
+/* TODO 8:
+   - For the .static-box class: keep the default document flow but style it for visibility.
+   - For the .relative-box class: use position: relative and nudge it 10px down and 10px right.
+   - For the .absolute-parent class: set position: relative and add background and padding.
+   - For the .absolute-child class: set position: absolute and place it in the top-right corner of the parent.
+   - For the .fixed-badge class: set position: fixed, pin it to the bottom-right of the viewport, 
+     and add small padding, a background, and rounded corners.
+   - For the .stack class: create two overlapping squares and control their stacking order using z-index.
+   - For the .stack.a class: apply a background color and set a lower z-index.
+   - For the .stack.b class: offset it slightly, apply a different background color, and set a higher z-index.
+*/
+
+html,
 body {
-  /* TODO: set a clean, readable font (e.g., system-ui) */
-  /* TODO: set a comfortable line-height (e.g., 1.6) */
-  /* TODO: remove default page margins */
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  background: var(--bg);
+  color: #111827;
 }
 
-/* Center the main content area (Task 8 - optional but recommended) */
-main {
-  /* TODO: set max-width (e.g., 800px) */
-  /* TODO: center with margin: 0 auto; */
-  /* TODO: add side padding (e.g., 1rem) */
+.site-header,
+.site-footer {
+  text-align: center;
+  padding: 1.25rem;
 }
 
-/* === Task 3: Element selectors === */
-h1 { /* TODO: pick a color and size */ }
-h2 { /* TODO: pick a color and size */ }
-p  { /* TODO: give paragraphs some bottom margin */ }
-
-/* === Task 4: ID selector (#site-title) === */
-#site-title {
-  /* TODO: make bigger/bolder than other headings */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-/* === Task 5: Class selectors (.card and .btn) === */
 .card {
-  /* TODO: light background color */
-  /* TODO: padding (e.g., 1rem) */
-  /* TODO: border-radius (e.g., 8px) */
-  /* TODO: margin between cards (e.g., 1rem 0) */
+  background: var(--card);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-block: 1rem;
 }
 
-.btn {
-  /* TODO: background color */
-  /* TODO: white text; remove border */
-  /* TODO: padding and border-radius */
-  /* TODO: cursor: pointer; */
+.box-row {
+  display: flex;
+  gap: 1rem;
 }
 
-/* === Task 6: Descendant selector (.nav a) + hover === */
-.nav a {
-  /* TODO: remove underline (text-decoration) */
-  /* TODO: spacing (padding) */
-  /* TODO: soft text color */
+.toolbar {
+  padding: 0.5rem;
+  border: 1px dashed rgba(0, 0, 0, 0.1);
 }
 
-.nav a:hover {
-  /* TODO: change color or background slightly on hover */
-}
-
-/* === Task 7: Grouping selector (h2, h3) === */
-h2, h3 {
-  /* TODO: give both a shared style (e.g., same color) */
+.position-stage {
+  position: relative;
+  padding: 2rem;
+  min-height: 260px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  overflow: hidden;
 }
