@@ -82,6 +82,7 @@ body {
 .site-footer {
   text-align: center;
   padding: 1.25rem;
+  background: var(--card);
 }
 
 .container {
@@ -92,10 +93,11 @@ body {
 
 .card {
   background: var(--card);
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0,0,0,0.06);
   border-radius: 12px;
   padding: 1rem 1.25rem;
   margin-block: 1rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
 }
 
 .box-row {
