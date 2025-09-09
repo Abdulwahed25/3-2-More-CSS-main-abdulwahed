@@ -3,10 +3,14 @@
 */
 
 
+
 /* TODO 1:
   - Define CSS variables on :root for brand colors.
   - Apply a global box-sizing reset using the universal selector (hint use * selector).
 */
+
+
+
 
 /* TODO 2:
    -Give .site-header & .site-footer a subtle background using var(--card)
@@ -69,6 +73,7 @@
 */
 
 html,
+
 body {
   margin: 0;
   padding: 0;
@@ -84,6 +89,19 @@ body {
   text-align: center;
   padding: 1.25rem;
   background: var(--card);
+}
+
+.tagline {
+  color: var(--muted);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-block: 1rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
 }
 
 .container {
@@ -105,6 +123,21 @@ body {
 .box-row {
   display: flex;
   gap: 1rem;
+
+}
+.box {
+  /* TODO: set the width and height; add padding; add border */
+  /* TODO: rounded corners; flex centering */
+  width: 120px;
+  height: 80px;
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  background: #fafafa;
+  font-weight:600;
 }
 
 .toolbar {
